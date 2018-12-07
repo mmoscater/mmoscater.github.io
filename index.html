@@ -1,40 +1,126 @@
 <!DOCTYPE html>
-<html lang="en-us">
-<head>
-  <meta charset="UTF-8">
-  <title>Mike Moscater</title>
-</head>
-<body>
-<img src="images/ucf-earth2.jpg" alt="UCF Logo over earth" width='300px' height="200px">
-<p>Hello, my name is <b>Michael Moscater</b>.</p>
-<p>I was born to Gene and Laureen Moscater.  I grew up outside
-  Orlando, FL in Casselberry. For most of my life I was very active in sports and technology
-  I have a very strong interest in technology now more than ever, and I have pursued this in my 
-  career.
-</p>
-<p>I currently work in Business Intelligence for Frontline Insurance.  I have been employed
-  there for 2 years and 3 months.  I started as an IT Business Analyst, but quickly demonstrated
-   a keen interest in data and understanding how to create, read, update, and delete data from 
-   datawarehouse. I was moved onto a project that would eventually become the Business Intelligence 
-   department.
-</p>
-<ul>
-  <li>Twitter</li>
-  <li>Other Social Media</li>
-  <li><a href="https://mmoscater.github.io/Pyber_Homework/">Pyber Homework</a></li>
-</ul>
-<table border="1">
-  <tr>
-    <th>Books</th>
-    <th>Movies</th>
-    <th>Games</th>
-  </tr>
-  <tr>
-    <td>Mr. Mercedes</td>
-    <td>Deadpool</td>
-    <td>Sim City</td>
-  </tr>
-</table>
-</body>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Latitude: Data Analysis with Attitude!</title>
+  </head>
+  <body style="background-color: #d6d6d6">
+    <nav class="navbar sticky-top navbar-light navbar-expand-md" style="background-color: #293133">
+        <img src="images/ucf-peg.png" alt="UCF Pegasus" style="width:50px;height:60px" class="navbar-brand">
+        
+        <a href="#" class="lead navbar-brand" style="color: gold; font-size: 30px">Latitude</a>
+        
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar" >
+            <span class="navbar-toggler-icon" style="background-color:gold"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="navbar-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle lead" data-toggle="dropdown" role="button" id="navbarDropdown" aria-haspopup="true" aria-expanded="false" style="color:gold">Plots</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: gold">
+                        <a href="temperature.html" class="dropdown-item lead">Temperature</a>
+                        <a href="humidity.html" class="dropdown-item lead">Humidity</a>
+                        <a href="cloudiness.html" class="dropdown-item lead">Cloudiness</a>
+                        <a href="wind.html" class="dropdown-item lead">Wind Speed</a>
+                    </div>
+                </li>
+                <li class="navbar-item">
+                        <a href="data.html" class="nav-link lead" style="color:gold">Data</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="comparison.html" class="nav-link lead" style="color:gold">Comparison</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <br>
+        <div class="container">
+            <div class="row">
+              <div class="col-md-7">
+                  <div class="card border-warning text-white mb-3" style="background: #293133">
+                    <h1 class="card-header lead" style="color:gold; font-size:40px">Summary:<br> Latitude vs. X</h1>
+                    <div class="card-body">
+                        <img src="images/fig1.png" class="rounded float-left" style="width: 200px;height: 150px" hspace="10">
+                        <p class="lead">
+                            The purpose of this project was to analyze how weather 
+                            changes as you get close to the equator. To acomplish this analysis, 
+                            we first pulled data from the OpenWeatherMap API to assemble a dataset 
+                            of over 500 cities.
+                        </p>
+                        <p class="lead m-l-md-2">
+                            After assembling the dataset, we used Matplotlib to plot various aspects 
+                            of the weather vs. Latitude. Factors we looked at included: temperature, 
+                            cloudiness, wind speed, and humidity. This site provides the source data 
+                            and visulaizations created as part of the analysis, as well as explanations 
+                            and descriptions of any trends and correlations witnessed.
+                        </p>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="card border-warning text-white mb-3" style="background: #293133">
+                    <h3 class="card-header lead" style="color:gold; font-size:40px">Visualizations</h3>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <p>
+                                        <a href="temperature.html">
+                                            <img src="images/fig1.png" alt="temperature" class="img-fluid rounded border">
+                                        </a>
+                                    </p>
+                                </div>
+                                <!-- <div class="w-100"></div> -->
+                                <div class="col-md-6">
+                                    <p>
+                                        <a href="humidity.html">
+                                            <img src="images/fig2.png" alt="humidity" class="img-fluid rounded border">
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <p>
+                                        <a href="cloudiness.html">
+                                            <img src="images/fig3.png" alt="cloudiness" class="img-fluid rounded border">
+                                        </a>
+                                    </p>
+                                </div>
+                                <!-- <div class="w-100"></div> -->
+                                <div class="col-md-6">
+                                    <p>
+                                        <a href="wind.html">
+                                            <img src="images/fig4.png" alt="wind" class="img-fluid rounded border">
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </main> 
+    <footer>
+        <div class="container-fluid fixed-bottom" style="background-color: #293133;">
+            <p class='lead align-center' style="color:gold">
+                &copy; Copyright Mike Moscater - UCF Coding Bootcamp 2018-2019
+            </p>
+        </div>
+    </footer> 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
 </html>
